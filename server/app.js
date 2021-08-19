@@ -6,10 +6,13 @@ const path = require("path");
 const logger = require("morgan");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
+const User = require("./models/User");
+const QA = require("./models/QA");
 
 const cors = require("cors");
 
 const app = express();
+
 /**
  * Middlewares
  */
@@ -44,8 +47,9 @@ app.use(
  * Routes
  */
 
-app.use("/api/auth", require("./routes/auth"));
-app.use("/api/users", require("./routes/users"));
+app.use("/api/auth", require("./routes/auth")); // authentication routes
+app.use("/api/users", require("./routes/users")); // users routes
+app.use("/api/", require("./routes/index")); // index page routes.
 
 // 404 Middleware
 app.use((req, res, next) => {

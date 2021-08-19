@@ -16,5 +16,10 @@
     "express-session": "^1.17.1",
     "mongoose": "^5.9.13",
     "morgan": "~1.9.1"
-  }
+  },
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
