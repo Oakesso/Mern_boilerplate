@@ -49,7 +49,7 @@ app.use(
 
 app.use("/api/auth", require("./routes/auth")); // authentication routes
 app.use("/api/users", require("./routes/users")); // users routes
-app.use("/api/", require("./routes/index")); // index page routes.
+app.use("/api", require("./routes/index")); // index page routes.
 
 // 404 Middleware
 app.use((req, res, next) => {

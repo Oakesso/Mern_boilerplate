@@ -4,8 +4,12 @@ if (!process.env.MONGODB_URI) {
   throw "Cannot read MONGODB_URI, the uri seems to be undefined, have you set the environment variables ?";
 }
 
+console.log("process.env.MONGODB_URI :", process.env.MONGODB_URI);
+
+const url = process.env.MONGODB_URI;
+
 mongoose
-  .connect(process.env.MONGODB_URI, {
+  .connect(url, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
